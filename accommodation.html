@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accommodation - Hill View</title>
+    <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0e0e9d">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            overflow-x: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Top bar */
+        .top {
+            width: 100%;
+            background: linear-gradient(45deg, #030335, #0e0e9d, #030335);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
+            flex-wrap: nowrap; /* Keep logo + buttons in one line */
+            overflow-x: auto;  /* Horizontal scroll if buttons overflow */
+        }
+
+        .logo img {
+            height: 8vh;
+            width: auto;
+        }
+
+        .button {
+            display: flex;
+            gap: 10px;
+            flex-wrap: nowrap; /* Keep buttons in one line */
+        }
+
+        .button a {
+            flex-shrink: 0; /* Prevent shrinking too much */
+            margin: 0;
+            padding: 8px 12px;
+            color: white;
+            background: #030335;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .button a:hover {
+            background: goldenrod;
+            color: black;
+            transform: scale(1.1);
+        }
+
+        /* Body content */
+        .body {
+            text-align: center;
+            padding: 20px 5%;
+        }
+
+        .body h1 {
+            font-size: 5vw;
+            margin-bottom: 10px;
+        }
+
+        .body p {
+            font-size: 1rem;
+            color: gold;
+            margin-bottom: 15px;
+        }
+
+        .duplex img {
+            width: 80%;
+            max-width: 500px;
+            height: auto;
+            box-shadow: 0 0 12px black;
+            margin: 15px 0;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(45deg, #030335, #0e0e9d, #030335);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px 5%;
+            gap: 20px;
+        }
+
+        .footer img {
+            height: 150px;
+            width: auto;
+        }
+
+        .contact {
+            color: white;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .contact ul {
+            list-style: none;
+        }
+
+        @media(max-width:768px){
+            .body h1 { font-size: 7vw; }
+            .body p { font-size: 0.9rem; }
+        }
+
+        @media(max-width:480px){
+            .button a {
+                padding: 6px 10px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <div class="logo">
+            <img src="HILL__3_-removebg-preview (1).png" alt="Logo">
+        </div>
+        <div class="button">
+            <a href="home.html">HOME</a>
+            <a href="services.html">SERVICES</a>
+            <a href="accommodation.html">ACCOMMODATION</a>
+            <a href="restaurant.html">RESTAURANT</a>
+        </div>
+    </div>
+
+    <div class="body">
+        <div class="duplex">
+            <h1>DUPLEX ROOM</h1>
+            <p>STARTING FROM ₹5,499/NIGHT</p>
+            <img src="Deluxe-555x400.jpg" alt="Duplex Room">
+
+            <h1>SUPER DELUXE ROOM</h1>
+            <p>STARTING FROM ₹6,499/NIGHT</p>
+            <img src="Super-deluxe-555x400.jpg" alt="Super Deluxe Room">
+
+            <h1>CABANA ROOM</h1>
+            <p>STARTING FROM ₹7,499/NIGHT</p>
+            <img src="Cabana-555x400.jpg" alt="Cabana Room">
+
+            <h1>ACCESSIBLE ROOM</h1>
+            <p>STARTING FROM ₹3,999/NIGHT</p>
+            <img src="A01.jpg" alt="Accessible Room">
+        </div>
+    </div>
+
+    <div class="footer">
+        <img src="HILL__3_-removebg-preview (1).png" alt="">
+        <div class="contact">
+            <ul>
+                <li>contact no: 6390xxxxxx</li>
+                <li>contact no2: 934xxxxxx</li>
+                <li>gmail: satya@gmail.com</li>
+                <li>CREATED BY: Satyapragnya samal</li>
+            </ul>
+        </div>
+        <img src="8bf0afd3-db8d-4ea2-95c5-65cb0537b162-291x300.png" alt="">
+    </div>
+
+    <script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js')
+    .then(() => console.log('Service Worker Registered'));
+}
+</script>
+
+</body>
+
+</html>
