@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- PWA manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0e0e9d">
+
+  <title>Hill View Resort</title>
+  
+  <style>
+    html, body { overflow-x: hidden; margin:0; padding:0; font-family: Arial, sans-serif; }
+    .top { height:18vh; width:100%; background: linear-gradient(45deg,#030335,#0e0e9d,#030335); display:flex; align-items:center; justify-content:space-between; padding:0 20px; box-sizing:border-box; }
+    .logo img { height: 25vh; width: auto; }
+    .button a { display:inline-block; margin:0 10px; padding:10px 15px; color:white; background:#030335; border-radius:6px; text-decoration:none; transition:0.3s; }
+    .button a:hover { background:goldenrod; color:black; transform:scale(1.1); }
+    .himg img { width:100%; height:auto; max-height:82vh; display:block; }
+    h1 { text-align:center; font-size:2em; margin:10px 0; }
+    h3 { text-align:center; color:goldenrod; font-size:1.2em; margin:5px 0 20px 0; }
+    .body { display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; padding:10px; }
+    .txt { flex:1 1 300px; max-width:600px; text-align:center; margin:20px; }
+    .txt p { font-size:1em; line-height:1.5; }
+    .bimage { flex:1 1 300px; max-width:600px; margin:20px; }
+    .bimage img { width:100%; box-shadow:0 0 16px black; transition:0.3s; }
+    .bimage img:hover { transform:scale(1.05); }
+    .sec { display:flex; flex-wrap:wrap; justify-content:center; margin:20px 0; }
+    .sec img { width:23%; margin:1%; height:auto; box-shadow:0 0 16px black; transition:0.3s; }
+    .sec img:hover { transform:scale(1.05); }
+    .footer { background: linear-gradient(45deg,#030335,#0e0e9d,#030335); display:flex; flex-wrap:wrap; justify-content:center; align-items:center; padding:20px; box-sizing:border-box; }
+    .footer img { margin:10px; height:150px; width:auto; }
+    .contact { color:white; font-size:0.9em; margin:10px; }
+    @media (max-width:768px) { .top { flex-direction:column; height:auto; padding:10px; } .button { margin-top:10px; } .sec img { width:48%; margin:1%; } .body { flex-direction:column; } }
+  </style>
+</head>
+<body>
+
+<div class="top">
+  <div class="logo">
+    <img src="HILL__3_-removebg-preview (1).png" alt="Hill View Resort Logo">
+  </div>
+  <div class="button">
+    <a href="index.html">HOME</a>
+    <a href="services.html">SERVICES</a>
+    <a href="accommodation.html">ACCOMMODATION</a>
+    <a href="restaurant.html">RESTAURANT</a>
+  </div>
+</div>
+
+<div class="himg">
+  <img src="resort-and-hotel-development-checklist.webp" alt="Resort Image">
+</div>
+
+<h1>Hotel Hill View, Bhubneswar</h1>
+<h3>MAKE YOUR STAY UNFORGETTABLE</h3>
+
+<div class="body">
+  <div class="txt">
+    <h3>Where Nature Meets Comfort</h3>
+    <p>Welcome to Hill View Resort, your perfect getaway nestled in the heart of nature. Surrounded by lush green hills and breathtaking views, our resort offers the ideal blend of comfort, relaxation, and adventure. Whether you’re here for a peaceful retreat, a family vacation, or a romantic escape, Hill View Resort promises an unforgettable experience.</p>
+  </div>
+  <div class="bimage">
+    <img src="Image-24.jpg" alt="Resort Room">
+  </div>
+</div>
+
+<div class="sec">
+  <img src="W1-1-scaled.jpg" alt="">
+  <img src="W3-scaled.jpg" alt="">
+  <img src="W4-scaled.jpg" alt="">
+  <img src="W2-scaled.jpg" alt="">
+</div>
+
+<div class="footer">
+  <img src="HILL__3_-removebg-preview (1).png" alt="Logo">
+  <div class="contact">
+    <ul>
+      <li>Contact no: 6390xxxxxx</li>
+      <li>Contact no2: 934xxxxxx</li>
+      <li>Gmail: satya@gmail.com</li>
+      <li>CREATED BY: Satyapragnya Samal</li>
+    </ul>
+  </div>
+  <img src="8bf0afd3-db8d-4ea2-95c5-65cb0537b162-291x300.png" alt="Footer Image">
+</div>
+
+<!-- Service Worker -->
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').then(()=>console.log('Service Worker Registered'));
+}
+</script>
+
+</body>
+</html>
