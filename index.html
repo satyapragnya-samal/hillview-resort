@@ -12,10 +12,44 @@
   
   <style>
     html, body { overflow-x: hidden; margin:0; padding:0; font-family: Arial, sans-serif; }
-    .top { height:18vh; width:100%; background: linear-gradient(45deg,#030335,#0e0e9d,#030335); display:flex; align-items:center; justify-content:space-between; padding:0 20px; box-sizing:border-box; }
-    .logo img { height: 25vh; width: auto; }
-    .button a { display:inline-block; margin:0 10px; padding:10px 15px; color:white; background:#030335; border-radius:6px; text-decoration:none; transition:0.3s; }
-    .button a:hover { background:goldenrod; color:black; transform:scale(1.1); }
+     .top {
+            width: 100%;
+            background: linear-gradient(45deg, #030335, #0e0e9d, #030335);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
+            flex-wrap: nowrap; /* Keep logo + buttons in one line */
+            overflow-x: auto;  /* Horizontal scroll if buttons overflow */
+        }
+
+        .logo img {
+            height: 8vh;
+            width: auto;
+        }
+
+        .button {
+            display: flex;
+            gap: 10px;
+            flex-wrap: nowrap; /* Keep buttons in one line */
+        }
+
+        .button a {
+            flex-shrink: 0;
+            margin: 0;
+            padding: 8px 12px;
+            color: white;
+            background: #030335;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .button a:hover {
+            background: goldenrod;
+            color: black;
+            transform: scale(1.1);
+        }
     .himg img { width:100%; height:auto; max-height:82vh; display:block; }
     h1 { text-align:center; font-size:2em; margin:10px 0; }
     h3 { text-align:center; color:goldenrod; font-size:1.2em; margin:5px 0 20px 0; }
@@ -94,3 +128,4 @@ if ('serviceWorker' in navigator) {
 
 </body>
 </html>
+
